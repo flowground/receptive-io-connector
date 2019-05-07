@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "role": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "endUser",
+                "vendorUser"
+            ]
+        },
+        "account": {
+            "required": false,
+            "type": "integer"
+        },
+        "limit": {
+            "required": false,
+            "type": "number",
+            "minimum": 0
+        },
+        "order_by": {
+            "required": false,
+            "type": "string"
+        },
+        "order_dir": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "asc",
+                "desc"
+            ]
+        }
+    }
+}

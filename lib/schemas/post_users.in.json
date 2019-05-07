@@ -1,0 +1,83 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "account": {
+                    "properties": {
+                        "created_at": {
+                            "format": "dateTime",
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "is_paying": {
+                            "type": "boolean"
+                        },
+                        "monthly_value": {
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "tags": {
+                            "description": "Simple tags are supplied as an array of Strings e.g ['Foo', 'Bar']. \nTo put the tags in categories replace the Strings with maps of using tag category as the key and tag value as the value, e.g \n\n[\n{Color:Red}, {Flavor:Cherry}\n]. Simple and categorised tags can be mixed in the same array.",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                },
+                "return_url": {
+                    "type": "string"
+                },
+                "user": {
+                    "properties": {
+                        "allowed_products": {
+                            "description": "Supplied as an array of maps where each map describes an existing or new product e.g [{id:exising_product_id, name:existing name}, {id:new_product_id, name: new product name}]. \nExisting product id/names held in your account can be referenced at https://receptive.io/app/#/vendor/products",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "created_at": {
+                            "format": "dateTime",
+                            "type": "string"
+                        },
+                        "email": {
+                            "type": "string"
+                        },
+                        "full_name": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "roles": {
+                            "enum": [
+                                "endUser"
+                            ],
+                            "type": "string"
+                        },
+                        "tags": {
+                            "description": "Simple tags are supplied as an array of Strings e.g ['Foo', 'Bar']. \nTo put the tags in categories replace the Strings with maps of using tag category as the key and tag value as the value, e.g \n\n[\n{Color:Red}, {Flavor:Cherry}\n]. Simple and categorised tags can be mixed in the same array.",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

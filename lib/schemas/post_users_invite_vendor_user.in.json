@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "external_id": {
+                    "type": "string"
+                },
+                "full_name": {
+                    "type": "string"
+                },
+                "permission_group_id": {
+                    "format": "integer",
+                    "type": "number"
+                },
+                "team": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "email",
+                "full_name"
+            ],
+            "type": "object"
+        }
+    }
+}

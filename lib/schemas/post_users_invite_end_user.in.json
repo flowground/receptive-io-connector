@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "account_external_id": {
+                    "type": "string"
+                },
+                "account_name": {
+                    "type": "string"
+                },
+                "account_status": {
+                    "enum": [
+                        "prospect",
+                        "not_paying",
+                        "paying"
+                    ],
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "full_name": {
+                    "type": "string"
+                },
+                "monthly_value": {
+                    "format": "float",
+                    "type": "number"
+                },
+                "send_invite": {
+                    "type": "boolean"
+                },
+                "user_external_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "account_status"
+            ],
+            "type": "object"
+        }
+    }
+}

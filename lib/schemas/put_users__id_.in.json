@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "number"
+        },
+        "requestBody": {
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "external_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "permission_group_id": {
+                    "description": "only valid for users with role 'vendorUser'",
+                    "format": "integer",
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

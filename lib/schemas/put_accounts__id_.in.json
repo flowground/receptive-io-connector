@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "number"
+        },
+        "requestBody": {
+            "properties": {
+                "monthly_value": {
+                    "format": "float",
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "status": {
+                    "enum": [
+                        "paying",
+                        "prospect",
+                        "not_paying"
+                    ],
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

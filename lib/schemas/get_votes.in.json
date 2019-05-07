@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "user_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "feature_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "positive": {
+            "required": false,
+            "type": "boolean"
+        },
+        "negative": {
+            "required": false,
+            "type": "boolean"
+        },
+        "start": {
+            "required": false,
+            "type": "number",
+            "minimum": 0
+        },
+        "limit": {
+            "required": false,
+            "type": "number",
+            "minimum": 0
+        }
+    }
+}

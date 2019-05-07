@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "external_id": {
+                    "type": "string"
+                },
+                "full_name": {
+                    "type": "string"
+                },
+                "permission_group_id": {
+                    "format": "integer",
+                    "type": "number"
+                },
+                "team": {
+                    "description": "A comma seperated list of teams the user belongs to",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

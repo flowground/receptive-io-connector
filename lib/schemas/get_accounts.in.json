@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "required": false,
+            "type": "number",
+            "minimum": 0
+        },
+        "start": {
+            "required": false,
+            "type": "number",
+            "minimum": 0
+        },
+        "order_dir": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "asc",
+                "desc"
+            ]
+        },
+        "order_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "churned",
+                "last_seen",
+                "name"
+            ]
+        }
+    }
+}

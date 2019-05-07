@@ -1,0 +1,481 @@
+{
+    "title": "Receptive",
+    "description": "## Who is this for?\n\nThis documentation is for developers creating their own integration with [Receptive's](https://www.receptive.io) API. If you are doing a standard integration, there's a really easy [Javascript integration](https://help.receptive.io/hc/en-us/articles/209221969-How-to-integrate-Receptive-with-your-app) that you should know about before you go to the effort of building your own integration.\n\n## Authentication\n\nAPI calls generally need to be authenticated. Generate an API Key at https://receptive.io/app/#/vendor/settings?section=integrate. This key should then be added to every request URL as a query parameter named 'auth-token'\n\n## Endpoint\n\nAPI endpoint is https://api.eu-west-1.receptive.io.\n## Notes\n\nAPI endpoints are being added to this documentation as needed by customers. If you don't see an endpoint you need please contact support and if it exists we'll publish the docs here. The 'try it out' feature on this documentation page will probably be blocked by your browser because the Access-Control-Allow-Origin header has its value set by the Receptive server depending on your hostname.\n\n## Generating client code\n\nThis documentation is automatically generated from an OpenAPI spec available [here](http://apidoc.receptive.io/receptive.swagger.json). You can use Swagger to auto-generate API client code in many languages using the [Swagger Editor](http://editor.swagger.io/#/)",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/receptive.io/1.0.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.eu-west-1.receptive.io/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "userApiKey": {
+                "label": "auth-token (userApiKey)",
+                "viewClass": "TextFieldView",
+                "note": "Generate an API Key at https://receptive.io/app/#/vendor/settings?section=integrate. This key should then be added to every request URL as a query parameter."
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_accounts": {
+            "main": "./lib/actions/get_accounts.js",
+            "title": "Query accounts",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_accounts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_accounts__id_": {
+            "main": "./lib/actions/delete_accounts__id_.js",
+            "title": "Delete an Account",
+            "description": "This removes most traces of an Accounts existence from the system.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_accounts__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_accounts__id_": {
+            "main": "./lib/actions/get_accounts__id_.js",
+            "title": "Get an Account",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_accounts__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_accounts__id_": {
+            "main": "./lib/actions/put_accounts__id_.js",
+            "title": "Update an Account",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_accounts__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_accounts__id__tags": {
+            "main": "./lib/actions/delete_accounts__id__tags.js",
+            "title": "Delete custom Account tags",
+            "description": "Removes all custom tags associated with the Account",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_accounts__id__tags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_accounts__id__tags": {
+            "main": "./lib/actions/get_accounts__id__tags.js",
+            "title": "Get custom Account tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_accounts__id__tags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_accounts__id__tags": {
+            "main": "./lib/actions/post_accounts__id__tags.js",
+            "title": "Overwrite current custom Account tags with the given tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_accounts__id__tags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_features": {
+            "main": "./lib/actions/get_features.js",
+            "title": "Query features",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_features.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_features__id_": {
+            "main": "./lib/actions/get_features__id_.js",
+            "title": "Get a Feature by ID",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_features__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_features__id__tags": {
+            "main": "./lib/actions/delete_features__id__tags.js",
+            "title": "Delete custom Feature tags",
+            "description": "Removes all custom tags associated with the Feature",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_features__id__tags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_features__id__tags": {
+            "main": "./lib/actions/get_features__id__tags.js",
+            "title": "Get custom Feature tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_features__id__tags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_features__id__tags": {
+            "main": "./lib/actions/post_features__id__tags.js",
+            "title": "Overwrite current custom Feature tags with the given tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_features__id__tags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_health_check_ping": {
+            "main": "./lib/actions/get_health_check_ping.js",
+            "title": "Health check for API",
+            "description": "Provides a response for automatic checks that the API and load balancers are healthy",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_health_check_ping.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_users": {
+            "main": "./lib/actions/get_users.js",
+            "title": "fetch User records",
+            "description": "get a list of User records",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_users.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_users": {
+            "main": "./lib/actions/post_users.js",
+            "title": "Ping to create or update an EndUser and Account in one call",
+            "description": "Replicates much of the functionality of the widget ping, allowing callers to create or update User records for End Users. If you call this with a new User and/or Account, the record will be created. If you call for an existing User/Account, the record will be updated. You can also call this at EndUser login time, or more frequently, to notify Receptive that the EndUser has been seen. This keeps Receptive's 'last seen' data fresh and updates your reporting. This endpoint is used by our Zapier integration. The only value allowed in user.roles is 'endUser'. The id you supply here for the User and Account should be your own unique id, which Receptive calls external_id. This probably isn't the same as Receptive's id seen elsewhere in the API.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_users.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_users_invite_end_user": {
+            "main": "./lib/actions/post_users_invite_end_user.js",
+            "title": "Invite an EndUser (customer)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_users_invite_end_user.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_users_invite_vendor_user": {
+            "main": "./lib/actions/post_users_invite_vendor_user.js",
+            "title": "Invite a VendorUser (Team member)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_users_invite_vendor_user.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_users_search": {
+            "main": "./lib/actions/get_users_search.js",
+            "title": "Find a User with a query",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_users_search.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_users__id_": {
+            "main": "./lib/actions/delete_users__id_.js",
+            "title": "Delete a User",
+            "description": "This removes most traces of a User's existence from the system. For an EndUser you might want to consider just letting them churn after a period of inactivity.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_users__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_users__id_": {
+            "main": "./lib/actions/get_users__id_.js",
+            "title": "Get a User record",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_users__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_users__id_": {
+            "main": "./lib/actions/put_users__id_.js",
+            "title": "Update a User",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_users__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_users__id__tags": {
+            "main": "./lib/actions/delete_users__id__tags.js",
+            "title": "Delete custom User tags",
+            "description": "Removes all custom tags associated with the User",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_users__id__tags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_users__id__tags": {
+            "main": "./lib/actions/get_users__id__tags.js",
+            "title": "Get custom User tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_users__id__tags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_users__id__tags": {
+            "main": "./lib/actions/post_users__id__tags.js",
+            "title": "Overwrite current custom User tags with the given tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_users__id__tags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_vendor_users": {
+            "main": "./lib/actions/post_vendor_users.js",
+            "title": "Create or update a team member by their external_id",
+            "description": "the POST /vendor_users is very similar to the POST /users/invite_vendor_user but /vendor_users is intended for consumers to refresh team member data periodically, rather than just a one-off user creation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_vendor_users.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_votes": {
+            "main": "./lib/actions/get_votes.js",
+            "title": "get_votes",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_votes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_votes": {
+            "main": "./lib/actions/post_votes.js",
+            "title": "update specified votes for a User",
+            "description": "Automatically subscribes/unsubscribes the User to the specifed feature depending on the quantity value",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_votes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "user_id": {
+                    "type": "string"
+                },
+                "votes": {
+                    "items": {
+                        "properties": {
+                            "feature_id": {
+                                "type": "string"
+                            },
+                            "quantity": {
+                                "description": "Value between -1 and 1000000. -1 indicates that the User is \"Not Interested\" in the feature.",
+                                "type": "integer"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

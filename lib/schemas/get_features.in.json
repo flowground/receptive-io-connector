@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "required": false,
+            "type": "number",
+            "minimum": 0
+        },
+        "start": {
+            "required": false,
+            "type": "number",
+            "minimum": 0
+        },
+        "order_dir": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "asc",
+                "desc"
+            ]
+        },
+        "is_private": {
+            "required": false,
+            "type": "boolean"
+        },
+        "wanted_by": {
+            "required": false,
+            "type": "integer"
+        },
+        "order_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "title",
+                "created_at",
+                "updated_at",
+                "declined_at",
+                "developing_at",
+                "planned_at",
+                "released_at",
+                "waiting_at",
+                "deleted_at"
+            ]
+        }
+    }
+}
